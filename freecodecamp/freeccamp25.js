@@ -1,4 +1,9 @@
 'use strict';
 
-console.log('My name is Alan,' + ' I concatenate.'
-);
+// Налаштування
+let lastNameLength = 0;
+const lastName = "Lovelace";
+
+// Змініть код лише під цим рядком
+lastNameLength = lastName.length;
+
