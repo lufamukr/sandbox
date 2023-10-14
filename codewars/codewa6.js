@@ -18,3 +18,13 @@ function isIsogram(str){
     }
 
 }
+
+
+// best solution
+
+function isIsogram(str){
+  console.log(new Set(str.toUpperCase()).size);
+	return new Set(str.toUpperCase()).size == str.length;
+}
+
+isIsogram('rap');
