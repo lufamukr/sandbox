@@ -5,4 +5,24 @@
 function whoseMove(lastPlayer, win) {
     //coding and coding..
     
+    if(win === true) {
+      console.log(lastPlayer);
+    } 
+    if(win === false && lastPlayer === 'black') {
+        console.log('white');
+    }
+    if(win === false && lastPlayer === 'white') {
+        console.log('black');
+    }
 }
+
+whoseMove('black', true);
+
+
+//   best solution
+
+function whoseMoveBS(lastPlayer, win) {
+    return win?lastPlayer:lastPlayer=="white"?"black":"white"
+}
+
+whoseMoveBS("white", false);
