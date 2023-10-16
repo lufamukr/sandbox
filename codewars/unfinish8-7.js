@@ -4,19 +4,25 @@
 
 let hotpo = function(n) {
     let res = '';
-    if(n == 0) return 0; 
-    for(let i = 1; i <= 5; i++) {
-        if(n % 2 === 1) {
-            n = (n * 3) + 1;
-        }   else {
+    for( let i = n; n !== 1; i--) {
+        if(n % 2 == 0) {
             n = n / 2;
+            res = res + '+';
+        }   else {
+            n = (n * 3) + 1;
+            res = res + '+';
         }
-        res = res + i;
+
     }
-    console.log(res.length);
-    return res.length;
+    console.log('res = ' + res.length);
 }
    
+hotpo(1);
 
-hotpo(8);
 
+
+// best solution
+
+const hotpoBS = n => n == 1 ? 0 : 1 + hotpoBS(n % 2 ? (n * 3 + 1) : n / 2);
+let result = hotpoBS(5);
+console.log(result);
